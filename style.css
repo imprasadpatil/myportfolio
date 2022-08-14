@@ -1,0 +1,36 @@
+.poster{
+   background-image: url(./assets/background.jpg);
+   height: 600px;
+   width: 100% ;
+}
+#logo{
+    margin-top: 15%;
+    margin-left: 10%;
+}
+.postercontent{
+color: white;
+margin-top: 30%;
+}
+#name{
+    font-size: 80px;
+}
+.about{
+    background-color: grey;
+    text-align: center;
+    width: 100% ;
+}
+.skills{
+    text-align: center;
+}
+.footer{
+    background-color: grey ;
+}
+.footercontent{
+    margin-top: 5%;
+}
+.icons>a{
+    height: 200px;
+}
+#fname{
+    font-size: 80px;
+}
