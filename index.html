@@ -1,129 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap For CSS #1-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
-    <!-- Local CSS #2-->
-    <link rel="stylesheet" href="style.css">
-  
-    <!-- Google popines font #3 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-  
-    <!-- Bootstrap JQuery #4 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  
-    <!-- find awsome icons #5-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
-  
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prasad Patil | Portfolio</title>
-    <link rel="icon" href="./assets/Favicon.png">
-  </head>
-  
-  <body>
-    <!-- Navigation Bar -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Prasad Patil</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-  
-            </ul>
-            <form class="d-flex">
-              <a href="https://www.linkedin.com/in/imprasadpatil/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="https://github.com/imprasadpatil" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </form>
-          </div>
+    <link rel="icon" href="./assets/Favicon.png" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: #f5f5f5; color: #222; }
+
+        /* Navbar */
+        nav { width: 100%; background: #ffffff; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        nav .logo { font-size: 22px; font-weight: 600; color: #222; }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li a { text-decoration: none; color: #222; font-weight: 500; }
+        nav .icons a { margin-left: 15px; font-size: 20px; text-decoration: none; color: #222; }
+
+        /* Hero */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 60px 8%; background: #fff; }
+        .hero img { width: 220px; }
+        .hero .text h1 { font-size: 45px; font-weight: 700; }
+        .hero .text h3 { font-size: 22px; color: #555; }
+
+        /* Section */
+        section { padding: 60px 8%; }
+        section h2 { font-size: 32px; margin-bottom: 15px; }
+        section p { margin-bottom: 12px; line-height: 1.6; }
+
+        /* Skills */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+        .skill { padding: 10px 18px; background: #222; color: #fff; border-radius: 6px; font-size: 14px; }
+
+        /* Footer */
+        footer { padding: 40px 8%; background: #222; color: #fff; margin-top: 40px; }
+        footer .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        footer iframe { width: 350px; height: 250px; border: none; border-radius: 8px; }
+        footer .icons a { margin-right: 15px; color: #fff; font-size: 22px; text-decoration: none; }
+        footer p { text-align: center; width: 100%; margin-top: 25px; font-size: 14px; color: #bbb; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+            footer .footer-inner { flex-direction: column; text-align: center; gap: 20px; }
+            footer iframe { width: 100%; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">Prasad Patil</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/imprasadpatil/" target="_blank">🔗</a>
+            <a href="https://github.com/imprasadpatil" target="_blank">💻</a>
         </div>
-      </nav>
-    </header>
-    <!-- Navigation End -->
-  
-    <!-- Poster -->
-    <div class="container-fluid">
-      <div class="row poster">
-        <div class="col-sm-6">
-          <a href="#"><img id="logo" src="./assets/Favicon.png" alt=""></a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div class="hero" id="home">
+        <img src="./assets/Favicon.png" alt="Profile Logo" />
+        <div class="text">
+            <h1>Prasad Patil</h1>
+            <h3>MERN Stack Developer | Software Engineer</h3>
         </div>
-        <div class="col-sm-6">
-          <div class="postercontent">
-            <h1 id="name">Prasad Patil</h1>
-            <h3 id="subheading">Software Engineer | Web Devloper</h3>
-          </div>
-        </div>
-      </div>
-      <!-- Poster ends -->
-      <!-- About -->
-      <div class=" row about">
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
         <h2>About</h2>
-        <p>Hello, this is Prasad Patil.</p>
-        <p>A Self-motivated Tech enthusiast with Full-Stack Web Development skills, Using HTML-5, CSS-3, Bootstrap-5,
-          Reactjs, Nodejs, MongoDB Atlas.</p>
-      </div>
-      <div class="skills ">
-        <div><h2>Skills</h2></div><br>
-        <div>
-          <span>
-            <button type="button" class="btn btn-primary">HTML</button>
-            <button type="button" class="btn btn-secondary">CSS</button>
-            <button type="button" class="btn btn-success">JavaScript</button>
-            <button type="button" class="btn btn-danger">Nodejs</button>
-            <button type="button" class="btn btn-warning">ExpressJS</button>
-            <button type="button" class="btn btn-info">Reactjs</button>
-          </span>
+        <p>Results-driven MERN Stack Developer with nearly 3 years of hands-on experience in designing and developing responsive & scalable web applications.</p>
+        <p>Proficient in MongoDB, Express.js, React, and Node.js with a strong focus on UI/UX, reusable components, API development, authentication, and performance optimization.</p>
+        <p>Adept at Agile methodologies, CI/CD basics, Docker, debugging, and writing maintainable, clean code with proper documentation.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React JS</span>
+            <span class="skill">Redux</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Express.js</span>
+            <span class="skill">MongoDB</span>
+            <span class="skill">REST APIs</span>
+            <span class="skill">Git & GitHub</span>
+            <span class="skill">Docker</span>
         </div>
-  
-      </div>
-    </div>
-  
-  <footer>
-    <div class=" container-fluid footer ">
-      <div class="row">
-        <div class="col">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61141.89177673714!2d74.23886789999999!3d16.70846855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1000cdec07a29%3A0xece8ea642952e42f!2sKolhapur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1660480214704!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-inner">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61141.89177673714!2d74.23886789999999!3d16.70846855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1000cdec07a29%3A0xece8ea642952e42f!2sKolhapur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1660480214704!5m2!1sen!2sin"></iframe>
+
+            <div>
+                <h2 style="margin-bottom: 10px">Prasad Patil</h2>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/imprasadpatil/" target="_blank">🔗</a>
+                    <a href="https://github.com/imprasadpatil" target="_blank">💻</a>
+                </div>
+            </div>
         </div>
-        <div class="col footercontent">
-          <h2 id="fname">Prasad Patil</h2>
-          <div class="icons">
-            <form class="d-flex">
-              <a href="https://www.linkedin.com/in/imprasadpatil/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="https://github.com/imprasadpatil" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </form>
-          </div>
-        </div>
-        <div class="row d-flex justify-content-center">
-          <p>Prasad Patil | Copyright-2022</p>
-        </div>
-      </div>
-  
-    </div>
-  </footer>
-  
-  
-  
-    <!-- Bootstrap for JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  </body>
+
+        <p>© 2025 Prasad Patil | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
