@@ -5,119 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prasad Patil | My Portfolio</title>
     <link rel="icon" href="./assets/Favicon.png" />
-
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { background: #f5f5f5; color: #222; }
-
-        /* Navbar */
-        nav { width: 100%; background: #ffffff; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        nav .logo { font-size: 22px; font-weight: 600; color: #222; }
-        nav ul { display: flex; list-style: none; gap: 25px; }
-        nav ul li a { text-decoration: none; color: #222; font-weight: 500; }
-        nav .icons a { margin-left: 15px; font-size: 20px; text-decoration: none; color: #222; }
-
-        /* Hero */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 60px 8%; background: #fff; }
-        .hero img { width: 220px; }
-        .hero .text h1 { font-size: 45px; font-weight: 700; }
-        .hero .text h3 { font-size: 22px; color: #555; }
-
-        /* Section */
-        section { padding: 60px 8%; }
-        section h2 { font-size: 32px; margin-bottom: 15px; }
-        section p { margin-bottom: 12px; line-height: 1.6; }
-
-        /* Skills */
-        .skills-container { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-        .skill { padding: 10px 18px; background: #222; color: #fff; border-radius: 6px; font-size: 14px; }
-
-        /* Footer */
-        footer { padding: 40px 8%; background: #222; color: #fff; margin-top: 40px; }
-        footer .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        footer iframe { width: 350px; height: 250px; border: none; border-radius: 8px; }
-        footer .icons a { margin-right: 15px; color: #fff; font-size: 22px; text-decoration: none; }
-        footer p { text-align: center; width: 100%; margin-top: 25px; font-size: 14px; color: #bbb; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero { flex-direction: column; text-align: center; }
-            footer .footer-inner { flex-direction: column; text-align: center; gap: 20px; }
-            footer iframe { width: 100%; height: 200px; }
-        }
+        nav { width: 100%; background:#fff; padding: 15px 40px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; }
+        nav ul { list-style:none; display:flex; gap:25px; }
+        nav a { text-decoration:none; color:#222; font-weight:500; }
+        .hero{ display:flex; justify-content:space-between; padding:60px 8%; background:#fff; }
+        .hero img{ width:220px; }
+        section{ padding:60px 8%; }
+        h2{ font-size:32px; margin-bottom:15px; }
+        .skills-container,.projects,.experience,.education,.research{ margin-top:20px; }
+        .skill{ padding:10px 18px; background:#222; color:#fff; border-radius:6px; margin:5px; display:inline-block; }
+        .project-card,.exp-card,.edu-card,.research-card{ background:#fff; padding:20px; border-radius:10px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+        footer{ background:#222; color:#fff; padding:40px 8%; }
+        footer iframe{ width:350px; height:250px; border-radius:8px; }
+        @media(max-width:768px){ .hero{ flex-direction:column; text-align:center; } footer iframe{ width:100%; height:200px; } }
     </style>
 </head>
 <body>
-
-    <!-- NAVIGATION -->
     <nav>
         <div class="logo">Prasad Patil</div>
         <ul>
-            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#research">Research</a></li>
         </ul>
-        <div class="icons">
-            <a href="https://www.linkedin.com/in/imprasadpatil/" target="_blank">🔗</a>
-            <a href="https://github.com/imprasadpatil" target="_blank">💻</a>
-        </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <div class="hero" id="home">
-        <img src="./assets/Favicon.png" alt="Profile Logo" />
-        <div class="text">
+    <div class="hero">
+        <img src="./assets/Favicon.png" />
+        <div>
             <h1>Prasad Patil</h1>
             <h3>MERN Stack Developer | Software Engineer</h3>
         </div>
     </div>
 
-    <!-- ABOUT SECTION -->
     <section id="about">
-        <h2>About</h2>
-        <p>Results-driven MERN Stack Developer with nearly 3 years of hands-on experience in designing and developing responsive & scalable web applications.</p>
-        <p>Proficient in MongoDB, Express.js, React, and Node.js with a strong focus on UI/UX, reusable components, API development, authentication, and performance optimization.</p>
-        <p>Adept at Agile methodologies, CI/CD basics, Docker, debugging, and writing maintainable, clean code with proper documentation.</p>
+        <h2>Profile Summary</h2>
+        <p>Results-driven MERN Stack Developer with nearly 3 years of experience in designing, developing, and deploying responsive and dynamic web applications...</p>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
-        <h2>Skills</h2>
+        <h2>Technical Skills</h2>
         <div class="skills-container">
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">React JS</span>
-            <span class="skill">Redux</span>
-            <span class="skill">Node.js</span>
-            <span class="skill">Express.js</span>
-            <span class="skill">MongoDB</span>
-            <span class="skill">REST APIs</span>
-            <span class="skill">Git & GitHub</span>
-            <span class="skill">Docker</span>
+            <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">React JS</span><span class="skill">Redux</span><span class="skill">Node.js</span><span class="skill">Express.js</span><span class="skill">MongoDB</span><span class="skill">REST APIs</span><span class="skill">Git</span><span class="skill">Docker</span>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer id="contact">
-        <div class="footer-inner">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61141.89177673714!2d74.23886789999999!3d16.70846855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1000cdec07a29%3A0xece8ea642952e42f!2sKolhapur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1660480214704!5m2!1sen!2sin"></iframe>
+    <section id="experience">
+        <h2>Professional Work Experience</h2>
 
-            <div>
-                <h2 style="margin-bottom: 10px">Prasad Patil</h2>
-                <div class="icons">
-                    <a href="https://www.linkedin.com/in/imprasadpatil/" target="_blank">🔗</a>
-                    <a href="https://github.com/imprasadpatil" target="_blank">💻</a>
-                </div>
-            </div>
+        <div class="exp-card">
+            <h3>Chainworks Digital Pvt Ltd (Aug 2024 – Sept 2025)</h3>
+            <h4>Project: Maha-Ayudaan</h4>
+            <p>Maha-ayudaan is a government-supported digital platform for organ donation across Maharashtra...</p>
         </div>
 
+        <div class="exp-card">
+            <h4>Project: Ayudaan</h4>
+            <p>A commercial LAN-based system for internal hospital organ transplant documentation...</p>
+        </div>
+
+        <div class="exp-card">
+            <h4>Project: Kalpvruksha Smart GR System</h4>
+            <p>A RAG-based chatbot to simplify understanding of Government Resolutions...</p>
+        </div>
+
+        <div class="exp-card">
+            <h3>Sofrego Private Limited (Feb 2023 – July 2024)</h3>
+            <h4>MyAcuvue Product</h4>
+            <p>A customer rewards platform enabling users to earn and track points...</p>
+        </div>
+
+        <div class="exp-card">
+            <h4>PDMI Portal</h4>
+            <p>A role-based access management system for permissions and controls...</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects Overview</h2>
+        <div class="project-card"><h3>Maha-Ayudaan</h3><p>Responsible for BSD module, UX optimization, caching, performance tuning...</p></div>
+        <div class="project-card"><h3>Ayudaan</h3><p>Architected entire LAN-based system with RBAC and secure data workflows...</p></div>
+        <div class="project-card"><h3>Kalpvruksha RAG System</h3><p>Handled full project lifecycle & stakeholder coordination...</p></div>
+        <div class="project-card"><h3>MyAcuvue</h3><p>Frontend development, routing, API integration, Jest testing...</p></div>
+        <div class="project-card"><h3>PDMI Portal</h3><p>RBAC implementation, UI development, secure JWT management...</p></div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="edu-card"><h3>PG Diploma - Project Management (2024–2026)</h3><p>MIT School of Distance Education</p></div>
+        <div class="edu-card"><h3>MCA (2021–2023)</h3><p>Bharati Vidyapeeth – CGPA 9.12</p></div>
+        <div class="edu-card"><h3>BCA (2018–2021)</h3><p>Bharati Vidyapeeth – CGPA 9.14</p></div>
+    </section>
+
+    <section id="research">
+        <h2>Research Publications</h2>
+
+        <div class="research-card">
+            <h3>Robotic Surgeries in India</h3>
+            <p>Studied economic aspects, success rates, advantages, and AI involvement...</p>
+        </div>
+
+        <div class="research-card">
+            <h3>AI in Pharmaceuticals</h3>
+            <p>Analyzed ML, automation, predictive analytics & global AI adoption trends...</p>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61141.89177673714!2d74.23886789999999!3d16.70846855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1000cdec07a29%3A0xece8ea642952e42f!2sKolhapur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1660480214704!5m2!1sen!2sin"></iframe>
+        </div>
         <p>© 2025 Prasad Patil | All Rights Reserved</p>
     </footer>
-
 </body>
 </html>
