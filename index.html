@@ -4,113 +4,186 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Im Prasad Patil</title>
+
+    <!-- Modern UI CSS (Glassmorphism + Responsive + Smooth UI) -->
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #222; }
-        header { background: #000; color: #fff; padding: 20px; text-align: center; }
-        section { padding: 30px; margin: 20px auto; max-width: 1000px; background: #fff; border-radius: 10px; }
-        h2 { border-bottom: 2px solid #000; padding-bottom: 5px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #dadada, #ffffff);
+            color: #222;
+            padding-top: 80px;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        nav h1 { font-size: 22px; font-weight: 700; }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #0077ff;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 35px;
+            margin: 30px auto;
+            max-width: 1100px;
+            background: rgba(255,255,255,0.6);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-radius: 16px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            border-bottom: 3px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
         ul { line-height: 1.8; }
-        .contact { text-align: center; font-size: 18px; }
+
+        .contact {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            nav { padding: 15px 20px; }
+        }
     </style>
 </head>
 <body>
 
-<header>
+<!-- Navbar -->
+<nav>
     <h1>Im Prasad Patil</h1>
-    <p class="contact">📞 +91 9503473579 | 📧 imprasadpatil1@gmail.com</p>
-</header>
+    <ul>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#research">Research</a></li>
+    </ul>
+</nav>
 
-<section>
+<!-- Contact -->
+<div class="contact">📞 +91 9503473579 | 📧 imprasadpatil1@gmail.com</div>
+
+<section id="summary">
     <h2>Profile Summary</h2>
-    <p>Results-driven MERN Stack Developer with nearly 3 years of hands-on experience in designing, developing, and deploying responsive and dynamic web applications. Proficient in front-end and back-end technologies, including MongoDB, Express.js, React.js, and Node.js, with a strong command of HTML5, CSS3, JavaScript (ES6+), and RESTful APIs. Adept at working in agile teams to deliver high-quality software solutions with a focus on performance, scalability, and user experience. Passionate about clean code, reusable components, and continuous learning to stay current with industry best practices.</p>
+    <p>Results-driven MERN Stack Developer with nearly 3 years of hands-on experience in designing, developing, and deploying responsive and dynamic web applications. Proficient in front-end and back-end technologies, including MongoDB, Express.js, React.js, and Node.js, with strong command of HTML5, CSS3, JavaScript (ES6+), and RESTful APIs...</p>
 </section>
 
-<section>
+<section id="skills">
     <h2>Technical Skills</h2>
     <ul>
-        <li><strong>Frontend Technologies:</strong> HTML, CSS, JavaScript, Bootstrap, React JS, Redux, Context API, JSX</li>
-        <li><strong>Backend Technologies:</strong> Node.js, Express.js, RESTful APIs, Authentication (JWT, OAuth)</li>
+        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap, React JS, Redux</li>
+        <li><strong>Backend:</strong> Node.js, Express.js, JWT, OAuth</li>
         <li><strong>Database:</strong> MongoDB</li>
-        <li><strong>Developer Tools:</strong> Git, GitHub, VS Code, Postman, Docker</li>
-        <li><strong>Agile Development:</strong> Scrum, JIRA</li>
-        <li><strong>Scrum Practices:</strong> Sprint Planning, Backlog Management, Kanban, Gantt Charts</li>
-        <li><strong>Platforms:</strong> Windows 10+, Ubuntu 22+, MacOS</li>
-        <li><strong>Soft Skills:</strong> Time Management, Problem Solving, Team Collaboration, Documentation</li>
+        <li><strong>Tools:</strong> Git, GitHub, Postman, Docker</li>
+        <li><strong>Agile:</strong> Scrum, JIRA</li>
+        <li><strong>Soft Skills:</strong> Time Management, Team Collaboration</li>
     </ul>
 </section>
 
-<section>
-    <h2>Technical Summary</h2>
-    <p>Nearly 3 years of dedicated experience in developing and deploying around 5 projects using MongoDB, Express.js, React.js, and Node.js. Proficient in HTML5, CSS3, JavaScript (ES6+), and responsive UI design using Bootstrap and MUI. Experienced in reusable React components, RESTful APIs, JWT authentication, MongoDB schema design, Agile/Scrum, CI/CD basics, debugging, and client-focused delivery.</p>
-</section>
-
-<section>
+<section id="experience">
     <h2>Professional Experience</h2>
+
     <h3>Chainworks Digital Pvt Ltd (Aug 2024 – Sept 2025)</h3>
-    <h4>Project 1: Maha-Ayudaan (Government Organ Donation System)</h4>
-    <p><strong>Description:</strong> A government-supported digital platform for managing organ donation processes across Maharashtra.</p>
-    <p><strong>Technologies:</strong> MERN Stack</p>
+    <h4>Project 1: Maha-Ayudaan</h4>
     <ul>
-        <li>Owned BSD module end-to-end, ensuring 100% on-time feature delivery.</li>
-        <li>Improved BSD form UX with dynamic Yes/No logic; reduced submission time by 50%.</li>
-        <li>Optimized performance with caching and API improvements (20% faster response).</li>
-        <li>Developed secure REST APIs and optimized MongoDB schemas.</li>
-        <li>Improved code quality through reviews and reduced technical debt by 15%.</li>
+        <li>Owned BSD module end-to-end.</li>
+        <li>Improved UX; reduced form time by 50%.</li>
+        <li> Optimised APIs (20% faster).</li>
     </ul>
 
-    <h4>Project 2: Ayudaan (Commercial Hospital Data Management)</h4>
-    <p><strong>Description:</strong> LAN-based system for hospital documentation compliance and organ transplant workflow.</p>
-    <p><strong>Technologies:</strong> MERN Stack</p>
+    <h4>Project 2: Ayudaan</h4>
     <ul>
-        <li>Architected and developed full system tailored for hospital LAN deployment.</li>
-        <li>Designed databases, schemas, and robust RBAC.</li>
-        <li>Handled full lifecycle: requirements → documentation → development → deployment.</li>
+        <li>Designed full LAN-based architecture.</li>
+        <li>Created secure RBAC backend.</li>
     </ul>
 
-    <h4>Project 3: Kalpvruksha Smart GR System (RAG Architecture Chatbot)</h4>
-    <p><strong>Description:</strong> RAG-based chatbot for understanding Government Resolutions.</p>
-    <p><strong>Technologies:</strong> React, FastAPI, RAG Architecture</p>
+    <h4>Project 3: Kalpvruksha Smart GR System</h4>
     <ul>
-        <li>Led full project lifecycle from concept to deployment.</li>
-        <li>Ensured compliance with data security and functional standards.</li>
+        <li>Led RAG chatbot development.</li>
+        <li>Handled full lifecycle & security compliance.</li>
     </ul>
 
-    <h3>Sofrego Private Limited (Feb 2023 – July 2024)</h3>
-    <h4>Project 1: MyAcuvue Product</h4>
-    <p><strong>Description:</strong> A reward tracking platform for product purchases.</p>
-    <p><strong>Technologies:</strong> React.js, Node.js, Express.js, MongoDB, Jest</p>
+    <h3>Sofrego Pvt Ltd (Feb 2023 – July 2024)</h3>
+    <h4>MyAcuvue Product</h4>
     <ul>
-        <li>Developed responsive UI and routing using React.</li>
-        <li>Integrated APIs for real-time reward tracking.</li>
-        <li>Wrote Jest unit tests for component stability.</li>
+        <li>Developed reward tracking UI.</li>
+        <li>Integrated APIs and Jest testing.</li>
     </ul>
 
-    <h4>Project 2: PDMI Portal</h4>
-    <p><strong>Description:</strong> Role-based access management system.</p>
-    <p><strong>Technologies:</strong> React.js, Node.js, Express.js, MongoDB</p>
+    <h4>PDMI Portal</h4>
     <ul>
-        <li>Built dynamic dashboards and forms.</li>
-        <li>Implemented RBAC and secure JWT authentication.</li>
+        <li>Built dynamic dashboards.</li>
+        <li>Implemented RBAC & JWT security.</li>
     </ul>
 </section>
 
-<section>
+<section id="education">
     <h2>Education</h2>
     <ul>
-        <li><strong>PG Diploma in Project Management (2024–2026, Ongoing)</strong><br>MIT School of Distance Education</li>
-        <li><strong>MCA (2021–2023)</strong> – CGPA: 9.12<br>Bharati Vidyapeeth Institute Of Management</li>
-        <li><strong>BCA (2018–2021)</strong> – CGPA: 9.14<br>Bharati Vidyapeeth Institute Of Management</li>
+        <li><strong>PGDPM</strong> (MIT – Ongoing, 2024–2026)</li>
+        <li><strong>MCA</strong> – CGPA 9.12</li>
+        <li><strong>BCA</strong> – CGPA 9.14</li>
     </ul>
 </section>
 
-<section>
+<section id="research">
     <h2>Research Publications</h2>
-    <h4>1. Study of Robotic Surgeries in India</h4>
-    <p>Analyzed robotics & AI integration in cancer-related surgeries, including success rates, economic impact, and cost comparisons across major Indian cities.</p>
+    <h4>1. Robotic Surgeries in India</h4>
+    <p>Study on robotics & AI in cancer treatment...</p>
 
-    <h4>2. Artificial Intelligence and Tools in Pharmaceuticals</h4>
-    <p>Explored AI applications in drug discovery, clinical trials, personalized medicine, and pharma automation while addressing challenges like regulation and data ethics.</p>
+    <h4>2. AI in Pharmaceuticals</h4>
+    <p>Explored machine learning & automation impact in pharma...</p>
 </section>
+
+<footer>
+    © 2025 Im Prasad Patil | All Rights Reserved
+</footer>
 
 </body>
 </html>
