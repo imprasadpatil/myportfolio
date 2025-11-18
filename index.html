@@ -3,187 +3,87 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Im Prasad Patil</title>
+    <title>Prasad Patil | Home</title>
 
-    <!-- Modern UI CSS (Glassmorphism + Responsive + Smooth UI) -->
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: linear-gradient(135deg, #dadada, #ffffff);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
             color: #222;
-            padding-top: 80px;
         }
-
-        /* Navbar */
-        nav {
+        header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 15px 40px;
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255,255,255,0.8);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             z-index: 1000;
         }
-        nav h1 { font-size: 22px; font-weight: 700; }
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-        nav ul li a {
+        header a {
             text-decoration: none;
-            color: #000;
-            font-weight: 600;
-            transition: 0.3s;
+            margin-left: 20px;
+            color: #222;
+            font-weight: bold;
         }
-        nav ul li a:hover {
-            color: #0077ff;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 35px;
-            margin: 30px auto;
-            max-width: 1100px;
-            background: rgba(255,255,255,0.6);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border-radius: 16px;
-            animation: fadeIn 0.8s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h2 {
-            border-bottom: 3px solid #000;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-
-        ul { line-height: 1.8; }
-
-        .contact {
+        .hero {
+            margin-top: 120px;
             text-align: center;
-            font-size: 18px;
-            margin-bottom: 20px;
+            padding: 80px 20px;
+            background: linear-gradient(135deg,#e3f2fd,#ffffff);
         }
-
-        /* Footer */
+        .hero h1 { font-size: 48px; margin-bottom: 10px; }
+        .hero h3 { font-size: 20px; opacity: 0.7; }
+        .section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+        .section h2 { text-align: center; margin-bottom: 20px; }
         footer {
-            text-align: center;
+            margin-top: 50px;
             padding: 20px;
-            margin-top: 40px;
-            background: rgba(0,0,0,0.7);
+            text-align: center;
+            background: #222;
             color: #fff;
         }
-
-        @media (max-width: 768px) {
-            nav ul { display: none; }
-            nav { padding: 15px 20px; }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #1976d2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo"><strong>Prasad Patil</strong></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<!-- Navbar -->
-<nav>
-    <h1>Im Prasad Patil</h1>
-    <ul>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#research">Research</a></li>
-    </ul>
-</nav>
+    <section class="hero">
+        <h1>Prasad Patil</h1>
+        <h3>MERN Stack Developer | Software Engineer</h3>
+        <a href="projects.html" class="btn">View My Projects</a>
+    </section>
 
-<!-- Contact -->
-<div class="contact">📞 +91 9503473579 | 📧 imprasadpatil1@gmail.com</div>
+    <section class="section">
+        <h2>Profile Summary</h2>
+        <p>Results-driven MERN Stack Developer with nearly 3 years of hands-on experience in designing, developing, and deploying responsive and dynamic web applications. Proficient in front-end and back-end technologies with strong expertise in React.js, Node.js, MongoDB, and Express.js. Focused on writing clean, maintainable code and delivering scalable, high-performance applications.</p>
+    </section>
 
-<section id="summary">
-    <h2>Profile Summary</h2>
-    <p>Results-driven MERN Stack Developer with nearly 3 years of hands-on experience in designing, developing, and deploying responsive and dynamic web applications. Proficient in front-end and back-end technologies, including MongoDB, Express.js, React.js, and Node.js, with strong command of HTML5, CSS3, JavaScript (ES6+), and RESTful APIs...</p>
-</section>
-
-<section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap, React JS, Redux</li>
-        <li><strong>Backend:</strong> Node.js, Express.js, JWT, OAuth</li>
-        <li><strong>Database:</strong> MongoDB</li>
-        <li><strong>Tools:</strong> Git, GitHub, Postman, Docker</li>
-        <li><strong>Agile:</strong> Scrum, JIRA</li>
-        <li><strong>Soft Skills:</strong> Time Management, Team Collaboration</li>
-    </ul>
-</section>
-
-<section id="experience">
-    <h2>Professional Experience</h2>
-
-    <h3>Chainworks Digital Pvt Ltd (Aug 2024 – Sept 2025)</h3>
-    <h4>Project 1: Maha-Ayudaan</h4>
-    <ul>
-        <li>Owned BSD module end-to-end.</li>
-        <li>Improved UX; reduced form time by 50%.</li>
-        <li> Optimised APIs (20% faster).</li>
-    </ul>
-
-    <h4>Project 2: Ayudaan</h4>
-    <ul>
-        <li>Designed full LAN-based architecture.</li>
-        <li>Created secure RBAC backend.</li>
-    </ul>
-
-    <h4>Project 3: Kalpvruksha Smart GR System</h4>
-    <ul>
-        <li>Led RAG chatbot development.</li>
-        <li>Handled full lifecycle & security compliance.</li>
-    </ul>
-
-    <h3>Sofrego Pvt Ltd (Feb 2023 – July 2024)</h3>
-    <h4>MyAcuvue Product</h4>
-    <ul>
-        <li>Developed reward tracking UI.</li>
-        <li>Integrated APIs and Jest testing.</li>
-    </ul>
-
-    <h4>PDMI Portal</h4>
-    <ul>
-        <li>Built dynamic dashboards.</li>
-        <li>Implemented RBAC & JWT security.</li>
-    </ul>
-</section>
-
-<section id="education">
-    <h2>Education</h2>
-    <ul>
-        <li><strong>PGDPM</strong> (MIT – Ongoing, 2024–2026)</li>
-        <li><strong>MCA</strong> – CGPA 9.12</li>
-        <li><strong>BCA</strong> – CGPA 9.14</li>
-    </ul>
-</section>
-
-<section id="research">
-    <h2>Research Publications</h2>
-    <h4>1. Robotic Surgeries in India</h4>
-    <p>Study on robotics & AI in cancer treatment...</p>
-
-    <h4>2. AI in Pharmaceuticals</h4>
-    <p>Explored machine learning & automation impact in pharma...</p>
-</section>
-
-<footer>
-    © 2025 Im Prasad Patil | All Rights Reserved
-</footer>
-
+    <footer>
+        © 2025 Prasad Patil | Portfolio
+    </footer>
 </body>
 </html>
