@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Prasad Patil</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+        }
+
+
+
+        /* Projects Section */
+        section {
+            padding: 60px 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Project Cards Layout */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding-top: 20px;
+        }
+
+        .project-card {
+            background: #c2e4f6;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .project-card p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .project-card a {
+            font-weight: 600;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .project-card a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div style="font-size: 22px; font-weight: 700; letter-spacing: 1px;">
+            I'am Prasad
+        </div>
+
+        <div style="display: flex; gap: 25px; font-size: 16px;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>My Projects</h1>
+        <p>A collection of applications I've built using MERN Stack and modern technologies.</p>
+    </header>
+
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+    <section>
+        <div class="projects-container">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Maha-Ayudaan</h3>
+                <p class="description">Government Organ Donation System developed using MERN Stack for statewide organ
+                    donation coordination.</p>
+                <p class="role"><strong>Role:</strong> Full-stack Developer</p>
+                <p class="technology"><strong>Technology:</strong> MERN Stack (MongoDB, Express.js, React, Node.js)</p>
+                <a href="project-maha-ayudaan.html" class="view-project-btn">View Project →</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>Ayudaan</h3>
+                <p class="description">Commercial hospital documentation & data management system with full LAN-based
+                    deployment.</p>
+                <p class="role"><strong>Role:</strong> Backend Developer</p>
+                <p class="technology"><strong>Technology:</strong> Node.js, Express.js, MySQL</p>
+                <a href="project-ayudaan.html" class="view-project-btn">View Project →</a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>Kalpvruksha Smart GR System</h3>
+                <p class="description">RAG chatbot for simplifying Government Resolutions using FastAPI + React.</p>
+                <p class="role"><strong>Role:</strong> Frontend Developer</p>
+                <p class="technology"><strong>Technology:</strong> FastAPI, React</p>
+                <a href="project-kalpvruksha.html" class="view-project-btn">View Project →</a>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <h3>MyAcuvue</h3>
+                <p class="description">Customer rewards & loyalty program with reward point tracking using React & Node.
+                </p>
+                <p class="role"><strong>Role:</strong> Full-stack Developer</p>
+                <p class="technology"><strong>Technology:</strong> React, Node.js</p>
+                <a href="project-myacuvue.html" class="view-project-btn">View Project →</a>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <h3>PDMI Portal</h3>
+                <p class="description">Role-Based Access Control system for managing users, roles & permissions across
+                    platforms.</p>
+                <p class="role"><strong>Role:</strong> Full-stack Developer</p>
+                <p class="technology"><strong>Technology:</strong> Node.js, React, MongoDB</p>
+                <a href="project-pdmi.html" class="view-project-btn">View Project →</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="contact">Want to work together? <a href="contact.html">Get in touch</a></p>
+
+        <!-- <p class="contact">
+        Contact Me: 
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:prasad@example.com">Email Me</a>
+    </p> -->
+
+        <p class="social">
+            Follow Me:
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/imprasadpatil" target="_blank">GitHub</a> |
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/imprasadpatil/" target="_blank">LinkedIn</a>
+        </p>
+
+        <p class="copyright">© 2025 Prasad Patil. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,76 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prasad Patil - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: #f5f7fa; color: #222; }
-        nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 10; }
-        nav a { margin-left: 25px; text-decoration: none; color: #222; font-weight: 600; }
-        nav a:hover { color: #007bff; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-        .intro { display: flex; justify-content: center; align-items: center; padding: 150px 40px 80px; gap: 50px; }
-        .intro img { width: 260px; height: 260px; border-radius: 50%; object-fit: cover; border: 5px solid #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-        .intro-text { font-size: 32px; font-weight: 700; }
-        .animated-text { color: #007bff; animation: fadeIn 3s infinite alternate; }
+        body {
+            background: #f5f7fa;
+            color: #222;
+        }
 
-        @keyframes fadeIn { from { opacity: 0.3; } to { opacity: 1; } }
 
-        section { padding: 80px 40px; }
-        h2 { font-size: 32px; margin-bottom: 20px; text-align: center; }
+        /* Header */
+        header {
+            text-align: center;
+            padding: 100px 40px;
+            background: linear-gradient(45deg, #a0d6f1, #69b8f0, #6984f1);
+            /* #e1edfa,*/
+            background-size: 200% 200%;
+            /* Creates a large gradient area */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 40px 40px;
+            animation: gradientAnimation 5s linear infinite;
+        }
 
-        .summary-box { max-width: 900px; margin: auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-        .summary-box a { display: inline-block; margin-top: 15px; color: #007bff; font-weight: 600; text-decoration: none; }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
 
-        .projects-preview { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 25px; max-width: 1100px; margin: auto; }
-        .card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .footer { background: #111; padding: 40px; color: #fff; text-align: center; margin-top: 40px; }
-        .footer a { color: #4da3ff; text-decoration: none; }
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Content inside the header */
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        /* Image Styling */
+        .profile-photo {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for image */
+        .profile-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Text Styling */
+        header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #f0f0f0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animated Text Styling */
+        .animated-text {
+            color: #152638;
+            /* Soft blue for the name */
+            font-family: monospace;
+            /* Gives that typewriter feel */
+            white-space: nowrap;
+            /* Prevents text from wrapping */
+            overflow: hidden;
+            /* Hides the text as it types */
+            width: 0;
+            /* Initially set to 0 */
+            border-right: 0.15em solid #152638;
+            /* The blinking cursor */
+            animation: typing 3s steps(13, end), blink 0.75s step-end infinite;
+        }
+
+        /* Typewriter typing effect */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Cursor blink */
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+
+
+        /* Hover effect for the button */
+        .cta-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        .cta-button:active {
+            transform: translateY(1px);
+        }
+
+        @media (max-width: 768px) {
+            .summary-box {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .cta-button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+
+        .projects-section {
+            padding: 80px 40px;
+            background: #f7f9fc;
+            /* subtle background for contrast */
+        }
+
+        .projects-section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .projects-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            display: block;
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            border-radius: 15px;
+            padding: 25px 20px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-content strong {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 8px;
+            color: #007bff;
+            /* project title color */
+        }
+
+        .card-content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: #007bff;
+            bottom: 0;
+            left: 0;
+            border-radius: 0 0 15px 15px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        @media (max-width: 768px) {
+            .projects-section h2 {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <nav>
-        <div class="logo"><strong>Prasad.</strong></div>
-        <div>
+        <div style="font-size: 22px; font-weight: 700; letter-spacing: 1px;">
+            I'am Prasad
+        </div>
+
+        <div style="display: flex; gap: 25px; font-size: 16px;">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
+
         </div>
     </nav>
 
-    <div class="intro">
-        <img src="your-photo.jpg" alt="Profile Photo" />
-        <div class="intro-text">Hello, I am <span class="animated-text">Prasad Patil</span></div>
-    </div>
 
-    <section>
-        <h2>Profile Summary</h2>
+    <header class="header">
+        <div class="header-content">
+            <img src="assets/prasad_patil.jpeg" alt="Profile Photo" class="profile-photo" />
+            <h1>Hello, I am <span class="animated-text">Prasad Patil...</span></h1>
+        </div>
+    </header>
+
+    <section class="profile-summary">
+        <h2> - Profile Summary - </h2>
         <div class="summary-box">
-            <p>Results-driven MERN Stack Developer with nearly 3 years of hands-on experience in designing, developing, and deploying responsive and dynamic web applications...</p>
-            <a href="about.html">Know More About Me →</a>
+            <p>
+                I am a MERN Stack Developer with nearly 3 years of hands-on experience, now transitioning into a project
+                management role. Throughout my career, I have specialized in designing, developing, and deploying
+                dynamic web applications using MongoDB, Express.js, React, and Node.js. My expertise lies in building
+                scalable, user-friendly solutions, and I’m eager to leverage this technical background to drive project
+                success, lead cross-functional teams, and optimize workflows. With a passion for combining technical
+                proficiency with strategic leadership, I am focused on delivering high-quality software solutions on
+                time and within scope. </p>
+            <a href="about.html" class="cta-button">Know About My Story →</a>
         </div>
     </section>
 
-    <section>
-        <h2>My Projects</h2>
+
+    <section class="projects-section">
+        <h2> - My Projects - </h2>
         <div class="projects-preview">
-            <a class="card" href="project-maha-ayudaan.html"><strong>Maha-Ayudaan</strong><br>Government Organ Donation System</a>
-            <a class="card" href="project-ayudaan.html"><strong>Ayudaan</strong><br>Hospital Data Management</a>
-            <a class="card" href="project-kalpvruksha.html"><strong>Kalpvruksha Smart GR System</strong><br>RAG Architecture</a>
-            <a class="card" href="project-myacuvue.html"><strong>MyAcuvue</strong><br>Customer Rewards Platform</a>
-            <a class="card" href="project-pdmi.html"><strong>PDMI Portal</strong><br>Role Based Access</a>
+            <a class="card" href="project-maha-ayudaan.html">
+                <div class="card-content">
+                    <strong>Maha-Ayudaan</strong>
+                    <p>Government Organ Donation System</p>
+                </div>
+            </a>
+            <a class="card" href="project-ayudaan.html">
+                <div class="card-content">
+                    <strong>Ayudaan</strong>
+                    <p>Hospital Data Management</p>
+                </div>
+            </a>
+            <a class="card" href="project-kalpvruksha.html">
+                <div class="card-content">
+                    <strong>Kalpvruksha Smart GR System</strong>
+                    <p>RAG Architecture</p>
+                </div>
+            </a>
+            <a class="card" href="project-myacuvue.html">
+                <div class="card-content">
+                    <strong>MyAcuvue</strong>
+                    <p>Customer Rewards Platform</p>
+                </div>
+            </a>
+            <a class="card" href="project-pdmi.html">
+                <div class="card-content">
+                    <strong>PDMI Portal</strong>
+                    <p>Role Based Access</p>
+                </div>
+            </a>
         </div>
     </section>
 
+
+    <!-- Footer -->
     <div class="footer">
-        <p>Contact Me: <a href="contact.html">Click Here</a></p>
-        <p>© 2025 Prasad Patil. All Rights Reserved.</p>
+        <p class="contact">Want to work together? <a href="contact.html">Get in touch</a></p>
+
+        <!-- <p class="contact">
+        Contact Me: 
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:prasad@example.com">Email Me</a>
+    </p> -->
+
+        <p class="social">
+            Follow Me:
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/imprasadpatil" target="_blank">GitHub</a> |
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/imprasadpatil/" target="_blank">LinkedIn</a>
+        </p>
+
+        <p class="copyright">© 2025 Prasad Patil. All Rights Reserved.</p>
     </div>
+
+
+
 
 </body>
+
 </html>

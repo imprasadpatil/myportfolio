@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDMI Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(45deg, #ff6f61, #ff8b7a);
+            color: white;
+            padding: 60px 20px;
+            margin-top: 50px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 4em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header p {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+
+        .header .cta-button {
+            background-color: #4e9ce9;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .header .cta-button:hover {
+            background-color: #3678b3;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Project Info Section */
+        .project-info {
+            margin-bottom: 50px;
+        }
+
+        .project-info h2 {
+            font-size: 2.7em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .project-info p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Button Styling */
+        .button-group {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            background-color: #4e9ce9;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .button:hover {
+            background-color: #3678b3;
+            transform: translateY(-3px);
+        }
+
+        /* Button Icon */
+        .button i {
+            font-size: 1.3em;
+        }
+
+        /* GitHub and Notion Button Colors */
+        .button.github {
+            background-color: #333;
+        }
+
+        .button.github:hover {
+            background-color: #000;
+        }
+
+        .button.notion {
+            background-color: #f8a800;
+        }
+
+        .button.notion:hover {
+            background-color: #e78900;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div style="font-size: 22px; font-weight: 700; letter-spacing: 1px;">
+            I'am Prasad
+        </div>
+
+        <div style="display: flex; gap: 25px; font-size: 16px;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="test.html">test</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>PDMI Portal</h1>
+            <p>Role-Based Access Management System for User, Role, and Permission Control</p>
+            <section class="button-group">
+                <a href="https://github.com" class="button github" target="_blank"><i class="fab fa-github"></i> View
+                    GitHub</a>
+                <a href="https://www.notion.so" class="button notion" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Notion-logo.svg" alt="Notion Logo"
+                        style="width: 20px; height: 20px; margin-right: 10px;">
+                    View Notion
+                </a>
+            </section>
+        </header>
+
+        <!-- Project Info Section -->
+        <div class="project-info">
+            <h2>Project Overview</h2>
+            <p><strong>Description:</strong> PDMI Portal is a comprehensive role-based access management system designed
+                to provide user, role, and permission control across various applications. It ensures that only
+                authorized users can access sensitive resources based on their roles and permissions.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Dynamic form creation for adding users, roles, and permissions.</li>
+                <li>Interactive dashboards for monitoring user activity and access.</li>
+                <li>Secure communication with JWT authentication and middleware for role validation.</li>
+                <li>Comprehensive role-based access control (RBAC) to manage permissions effectively.</li>
+                <li>Scalable architecture with the ability to integrate into multiple applications.</li>
+            </ul>
+            <p><strong>Target Audience:</strong> Enterprises, organizations, and institutions requiring secure user
+                access management and role-based permissions across their applications.</p>
+            <p><strong>Role:</strong> Full Stack Developer – Designed and developed the frontend using React.js, managed
+                the backend logic with Node.js and Express, and implemented secure communication with JWT-based
+                middleware for role management.</p>
+            <p><strong>Technology:</strong> React.js, Node.js, Express.js, MongoDB</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="contact">Want to work together? <a href="contact.html">Get in touch</a></p>
+
+        <p class="social">
+            Follow Me:
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/imprasadpatil" target="_blank">GitHub</a> |
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/imprasadpatil/" target="_blank">LinkedIn</a>
+        </p>
+
+        <p class="copyright">© 2025 Prasad Patil. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+</html>

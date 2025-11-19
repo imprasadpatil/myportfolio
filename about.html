@@ -1,112 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Prasad Patil</title>
+    <title>About - Prasad Patil</title>
+    <!-- Add FontAwesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
 
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
             background: #f5f7fa;
             color: #222;
         }
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255,255,255,0.8);
-            backdrop-filter: blur(10px);
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        header a {
-            text-decoration: none;
-            margin-left: 20px;
-            color: #222;
-            font-weight: bold;
-        }
-        .section {
-            padding: 120px 20px 50px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .block {
+
+        .TS-box {
+            max-width: 100%;
+            margin: 5%;
             background: #fff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 30px 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            text-align: center;
-            background: #222;
-            color: #fff;
+        
+
+        .TS-box h2 {
+            font-size: 24px;
+            color: #007bff;
+            /* Primary color for the heading */
+            margin-bottom: 15px;
         }
+
+        .TS-box p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .TS-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .TS-box ul li {
+            font-size: 16px;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .TS-box ul li::before {
+            content: '•';
+            /* Bullet point */
+            font-size: 20px;
+            color: #007bff;
+            /* Match bullet with heading color */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .TS-box strong {
+            font-weight: bold;
+            color: #555;
+            /* Slightly darker for emphasis */
+        }
+
+        @media (max-width: 768px) {
+            .TS-box {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .TS-box h2 {
+                font-size: 20px;
+            }
+
+            .TS-box p,
+            .TS-box ul li {
+                font-size: 14px;
+            }
+        }
+
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #007bff;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .box {
+            max-width: 100%;
+            margin: 5%;
+            background: #fff;
+            padding: 30px 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .box ul {
+            margin-left: 20px;
+            color: #333;
+        }
+
+        .box ul li {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .box ul li i {
+            color: #007bff;
+            margin-right: 10px;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        .box ul li strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .box ul li:hover {
+            background-color: #f0f4f8;
+            padding-left: 10px;
+            border-left: 4px solid #007bff;
+            transition: background-color 0.3s ease, padding-left 0.3s ease;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .box {
+                padding: 20px 15px;
+            }
+        }
+
+        .testimonial-card {
+      background-color: #f8f8f8;
+      padding: 30px 25px;
+      border-radius: 15px;
+      width: 300px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .testimonial-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 4px solid #feb47b;
+      object-fit: cover;
+    }
+
+    .client-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .client-position {
+      font-size: 1rem;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .testimonial-card {
+        width: 80%;
+        margin-bottom: 30px;
+      }
+    }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="logo"><strong>Prasad Patil</strong></div>
-        <nav>
+
+    <nav>
+        <div style="font-size: 22px; font-weight: 700; letter-spacing: 1px;">
+            I'am Prasad
+        </div>
+
+        <div style="display: flex; gap: 25px; font-size: 16px;">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
-        </nav>
+        </div>
+    </nav>
+
+    <header>
+        <h1>About Me</h1>
+        <p>MERN Stack Developer • Programmer • Problem Solver</p>
     </header>
 
-    <section class="section">
-        <h2>About Me</h2>
+    <section class="profile-summary">
+        <div class="TS-box">
+            <h2>Technical Summary</h2>
+            <p>
+                With nearly 3 years of hands-on experience as a MERN Stack Developer, I have developed and deployed 5+
+                projects using MongoDB, Express.js, React.js, and Node.js. I am proficient in:
+            </p>
+            <ul>
+                <li>HTML5, CSS3, and JavaScript (ES6+)</li>
+                <li>Responsive UI design with Bootstrap and MUI for better user engagement</li>
+                <li>Building reusable React components using Hooks, Redux, and React Router for dynamic single-page
+                    applications (SPAs)</li>
+            </ul>
 
-        <div class="block">
-            <h3>Profile Summary</h3>
-            <p>Results-driven MERN Stack Developer with nearly 3 years of hands-on experience in designing, developing, and deploying responsive and dynamic web applications. Proficient in React.js, Node.js, Express.js, MongoDB, REST APIs, and modern JavaScript. Passionate about clean code, reusable components, scalable architecture, and performance optimization.</p>
+            <p>
+                On the backend, I specialize in:
+            </p>
+            <ul>
+                <li>Building RESTful APIs and integrating third-party services</li>
+                <li>Managing asynchronous operations with Axios and Fetch</li>
+                <li>Creating scalable and secure backends using Node.js and Express.js</li>
+                <li>Implementing JWT-based authentication/authorization and writing middleware</li>
+                <li>Working with MongoDB and Mongoose for data modeling, validation, and complex aggregation queries
+                </li>
+            </ul>
+
+            <p>
+                <strong>While my core expertise is in development, I am also transitioning into a project management
+                    role.</strong> I am experienced with:
+            </p>
+            <ul>
+                <li>Agile/Scrum methodologies for leading development sprints</li>
+                <li>Coordinating tasks and ensuring the timely delivery of projects</li>
+                <li>Collaborating with teams to optimize workflows and maintain high-quality code</li>
+            </ul>
+
+            <p>
+                I am familiar with the following tools and practices to ensure smooth development processes:
+            </p>
+            <ul>
+                <li>Git-based version control and collaborative development</li>
+                <li>CI/CD processes, Docker, and unit testing for quality assurance</li>
+                <li>Debugging with Chrome DevTools, Postman, and logging tools to resolve frontend and backend issues
+                </li>
+            </ul>
+
+            <p>
+                <strong>As I move into project management, I aim to leverage my technical experience to bridge the gap
+                    between development teams and stakeholders.</strong> I’m focused on ensuring smooth communication,
+                efficient workflows, and the successful delivery of high-quality software solutions.
+            </p>
         </div>
 
-        <div class="block">
-            <h3>Technical Skills</h3>
-            <p><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap, React JS, Redux, Context API, JSX</p>
-            <p><strong>Backend:</strong> Node.js, Express.js, RESTful APIs, Authentication (JWT, OAuth)</p>
-            <p><strong>Database:</strong> MongoDB</p>
-            <p><strong>Developer Tools:</strong> Git, GitHub, VS Code, Postman, Docker</p>
-            <p><strong>Agile:</strong> Scrum, JIRA</p>
-            <p><strong>Soft Skills:</strong> Time Management, Problem Solving, Collaboration, Documentation</p>
+
+
+        <div class="box">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Frontend:</strong> - HTML, CSS, JavaScript, Bootstrap, React JS, Redux, Context API, JSX
+                </li>
+                <li><strong>Backend:</strong> - Node.js, Express.js, REST APIs, Authentication (JWT, OAuth)</li>
+                <li><strong>Database:</strong>- MongoDB</li>
+                <li><strong>Tools:</strong>- Git, GitHub, VS Code, Postman, Docker</li>
+                <li><strong>Agile:</strong> - Scrum, JIRA, Kanban, Sprint Planning</li>
+                <li><strong>Platforms:</strong>- Windows, Ubuntu, MacOS</li>
+                <li><strong>Soft Skills:</strong> - Time Management, Problem Solving, Collaboration, Documentation
+                </li>
+            </ul>
         </div>
 
-        <div class="block">
-            <h3>Technical Summary</h3>
-            <p>Nearly 3 years of experience developing MERN applications. Skilled in reusable React components, building APIs, database modeling, JWT authentication, performance optimization, debugging, CI/CD basics, and collaborative development. Experienced with Axios, Fetch, Mongoose, middleware, and Git workflow.</p>
+
+
+        <div class="box">
+            <h2>Education</h2>
+            <ul>
+                <li><i class="fas fa-graduation-cap"></i><strong>PGD in Project Management (2024–2026)</strong><br> –
+                    MIT School of Distance Education</li>
+                <li><i class="fas fa-graduation-cap"></i><strong>MCA (2021–2023)</strong><br> – Bharati Vidyapeeth
+                    Institute (CGPA: 9.12)</li>
+                <li><i class="fas fa-graduation-cap"></i><strong>BCA (2018–2021)</strong><br> – Bharati Vidyapeeth
+                    Institute (CGPA: 9.14)</li>
+            </ul>
         </div>
 
-        <div class="block">
-            <h3>Education</h3>
-            <p><strong>PG Diploma in Project Management</strong> (MIT School, 2024–2026, Ongoing)</p>
-            <p><strong>MCA</strong> (Bharati Vidyapeeth Institute, 2021–2023, CGPA: 9.12)</p>
-            <p><strong>BCA</strong> (Bharati Vidyapeeth Institute, 2018–2021, CGPA: 9.14)</p>
+        <div class="box">
+            <h2>Research Publications</h2>
+            <ul>
+                <li><i class="fas fa-book"></i><strong>Study of Robotic Surgeries in India</strong><br>Explores robotics
+                    & AI in cancer surgery...</li>
+                <li><i class="fas fa-book"></i><strong>Artificial Intelligence & Tools in
+                        Pharmaceuticals</strong><br>Overview of how AI transforms drug discovery...</li>
+            </ul>
         </div>
 
-        <div class="block">
-            <h3>Research Publications</h3>
-            <p><strong>Study of Robotic Surgeries in India</strong> — Analyzed robotics and AI usage in cancer treatment, cost comparisons, success rates, and technological evolution.</p>
-            <p><strong>AI and Tools in Pharmaceuticals</strong> — Overview of ML, predictive analytics, automation, and challenges in pharma AI adoption.</p>
+        <div class="box">
+            <h2>What Others says About Me</h2>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"I had the pleasure of working with Prasad Patil as a developer, and he consistently went above and beyond. In addition to his strong technical skills, Prasad excelled in project coordination and client communication. He helped streamline processes and effectively managed client relationships, contributing significantly to our project success. I highly recommend him for any role that requires both technical expertise and strong interpersonal skills."</p>
+                <div class="testimonial-info">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAnwMBEQACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQMEBQYCBwj/xAAxEAABAwMDAwMCBQQDAAAAAAABAAIDBAUREiExBkFREyJhMnEHFDNCgSNSkeEVYqH/xAAZAQEAAwEBAAAAAAAAAAAAAAAAAQIDBAX/xAAmEQEAAgICAgICAQUAAAAAAAAAAQIDESExBBIiQRMycQUUI1Fh/9oADAMBAAIRAxEAPwDz1dLmCBcIDCAQJnHKCBVXBsZLY/c5QvFNq41T5XkPGXHbJPChrEacNhy/S058kqYSciDMkPBKJ06Ppudoa0/yo3COYR5GHcgYAUhYKh0b8g7oieV5S1QmAB+rCMrV0kqVAgEAgEAgEAgEAgEFddqr0ovTb9TlC9aqmFmrflxUNoT6S1SzO1NHKztkiGtMNrLWm6ZmdguOFjPkQ6Y8OVrRdLtbvMcrO2ffTWnixHbqp6aif+m0g+QqVzTC9/FrPSguVjqqfOkah5XVjz1lx5PFtXmFKKZ+sh2G4W8TtyzGu3bcxvy1xyO+UQvKScVEIePG6mGM10eUqhAqBEAgEAgECoOXkNaXOOw3QZqtmM9Q4uPfZV23iNLC2QiV7dvassltOjDTctvbKRoaPaFwXty9XHWIhdQ0+w2CovKUyDA4RGy+gPCG0eopGOGC3ZR0tvcMnfbCzTJLA0fbC6cWfXEuTN40TEzDFyx6Q5hZgtXdWdw8yY0kWuZ0cwjd9DgpZ3jcLtWYhAIBAIBAIBAIItxOISB3UL42exrkLRvnuVVs2Fno2w07C4bndcmWeXoYK6hqKAgYwuOzuhcRkYGyrslJYMq0SoRwc1SI00rjseFC0ccoNQNUZB4SO09vPOoaT8rVPOBpduF6WC26vJ8ivrdSse71RoxnK2c7R08glia743Uw57V1J1SgmECoEKAQGEC4QCCDdHmOIOGOe6hpjVNFvVNB5conptXttsinjY12OFx5Ky9DHfULS3VEDmj+qM+MrmmsuiMtWjoYmzDAO6z9VpvCyZSFpweVPrKnsZrJKekbmpcGgcqYrMom+uWduHUVqaSInlx+Ata4bSy/uYhVx3qGTOsFrTwRwrWwzC1fIiyp6tgE1C2ePt3Cvgt620p5VfavsxYcxrWludYO67Zl5y6sj9VMR4clWWRYq7IKAIbCJCkChAUgQRLnF6lI/wCN1WV6dqe1szXQD+54yodFWsu9trKuqxE72Y84WF7VrPLqritaOHMHTTo26pa+NsnIbqVfy1nqCcER3K/sLprTOPzExcDx4Kwy/wDIdFMevtuKKtFQ0vadseVhWy3rpUX30Zw/1M7DkdlekzvhaK8cszCy0U1T6U1G8v06t2k7Loj8mtwwvbFWdLampLS+V8DItEmPoIwR/Cxve8dtqRXXSr6joGx2ueFo9oBLVbFb5IzV3R5pTU75qj0Gt1SHYD5XduI7eZWk2nUL+3UU1FEY52aX5zhTSYnplnpNJ1KVhaMAgFAMIEQKgMIDCDidzWROc/jCWnhpjr7WU9nY3/l6d2+kyAgFZ/TqiupbyvY+UOZA4tce4XDknduXpY6/HgwbMahlLkCOSInU/nWD5V65axxpnfxpt3Kf1BK1sMLY2xsZEwMDWDc/JKra+2laTSEjp10/5V2JMfGVzX7bxETHKc/XIx8b9W45CnHOpLQ5bbI6qqjqKtznyxABhBxst/yzEMLYqzPMJotjXVDqnLnSnlzuVje22kTERrSBe4jJSyMcB9JCYp+Reu4lhumrJJWXeSdv0we5xHf4XbnvEV04/GxfPa46liayaNzWaC4cJ4szMM/6lFdxKmwux5QwgMIDCEDCJLhEDCAQNVMZkhc3yFS8cNsFoi3KvscbnXynY7gHYKleYdkxqz0inpm+qdS4Mv7PTxfqnikDhkA4WLXcKS+MaxzYmDLirwrblb2CjJo843IVLcytxCW1hjnHPODsoqiZ4WjKZrt8DKvNZZeyQIA1hUTCNqC/MDYXn4UU4lb6Z7pZraOFz3vbqkJkdjsN8ArXNbdoMNYim/tU3qpNTWuydmbBd/j11R43m5PbLMIC3cmwhsIgIBAIBAuENjCiek1nUwi01M6nu8U7ScNcHBcvtqdPV9faIs9AoZ2vk1eVy5Y5duOeF1raI8g4WK7O1MTP+Qllmdljm4bnsVeOlp0vrHWshp9LowMjGUiJZ2sdnrYi8sAG/JHZPX7Vi0yfjrG8tOyShKbUh8exVZslQ3xwMbs8KKdrV6VU0trgt7JGVEThjOho3Lvla0pa9meXPXHVknuL3lx7nK9WI1EQ8G1vaZmSYUqDCAwiSYQ2MIguEAgEAg4kfI2PDXcdlnakOrDmtHDRW2o2YexblcWWvL1cVuFtNUv0gA8hYRVtM8KiRznuJkkA/la/wrE7Tbc8aTEJ8A/uxwp0esJ2umiI973O+e6iamjlPU08spjik1OHICrrhWd7WER0gNysJhf6U3VE3p2+ZwO4aVpir8kWnVZYKghMUQ1HLne457L1a1108PPkm8pS0YjCIIoAgEAgECqQIBEkIRPSwoJMNDf7eFyZqvT8a+40t4KhkhDSdwuSa6du4lWz0LvzjnAuLStItGj05XVsp4YoiHgBx43U7bRbSbLSQyFvoeME5UTKPbfZyioGU2p4aA7O7lja0qT2kCUOcXcKidMv1hUtkibBGcue4Z+y6MFfk5/IvFaKDHC9OHhzzIROghoIjQTRoIaCAQClOgoRoIBEumOcwjSVS9dw1xXmloTIakCcHuNiFyTX6erF98runkDjxlc01l0xaNLaFmsfQNvhREzBMwlsdobj0wkzKmzU0+hhzsCqRC3audUZ9rN1fWlu2WuvvrnkncbL0PHr8dvH82+7+sIuF0OIYQ2ENkQ2FJsKEhDQRAQ2XCAwgUBAEHbCJjs/V0M7J9TQWycOb8rjvbUvYx4/asaPUdZLE8MkBaR5WeotzC3ypxLQU93DWgLOaLbmUttzc8e1mc/CiaEVlHmdLUOAxhRxVpWknRB6TMDc8qkzuW8aiGavdJJSVuJAR6jBIM+CvUxfpDwPKj/JMoC1coRJMIBAFAmEAgMIFQGECogIOY5mNuFJE53MzNX2yqzLXHX7eh9Y2j8tWMrImf0ZtnHw7/a489Z1t6/iZInhl56b3hxG3lc0Tp12pvtNtzWxluW5HyFE2lMQvstMeGNaAo2pHZqKPL8gZVZXmYXPT9nN1rg0tJgYcyO7fZbYqb5lz5ssVqyn4yTw0vVFLDE0BsVOGkD/AMXo0/WHlX+TItcHty08rTbmmuihEFRBEAgECYRJcIgIFQMTVcEP6jwFG1opMqye9H1CyBu3kqJlrGNBNQ8zCXUdQdnKhr6xEPpDp18PUfS9KajDxNCA/wAg+VS0b4TjvNJ3DN3npuqtWdTDLTftkaM/5XDfFNZ4eviz1urqWONwGdiFi2laRRRMZlzxjHJTlnMpFmpJrzVGnoG6YW/qzkbD4HytceObcywy5YpD0q20NPbKNsEAwxo3ceXHyV0xEdQ861ptO5fNP4j3MXXqyvnY7LGv9Np+GrpiNRpRmhPMwZjkIwhMRPaRT3d3ErM/IU7UnFH0soKuGYex+/gqdsrY5hIwMZypV1oIgYQCBCQNy4D7onW0OpuUMGQCHu8BRteuOZVdRdaiQlrcMafHKjtrXHEIDtRBdIT/ACUX1Blj9L8lQH85xhSPdPwVrvXtD6Quy+CQ4b8FVlV6wYo5ojFK1r2kbtI2WMrxM15hiupOjxA2SstgJABLovH2WN8UT07sPlbj1szHTFjunU9TqqGyUdrjdh5xh0nwPCmuH05sZc+unrVut9NbqVlNRxNjiYMAAc/daOK1ptO5Qura9ts6cr6tztOiE6T8nZTWOVXyjO8yPJdyTk/ddCDZUBhzCHZUp26YT22KgSoqyeLADyR4KKzESmRXTP6jP8KdqTjiUqKtif8Aux91O1JxyhVN5Zu2Buf+xUbXjH/tWz1c031SHHhQ1isQZA3RLsNClGzErtbtA4CgN9yEQcjbsiXpH4M3L8n1IIC7admkZPdJVl9D05JcfssbLKm+dTUtpk9IsMzwMkNPCtXHNuUTOmUqfxLipy0Q25zWh24yOMq04p+0e0tzZLvSXqiZVUUgc0j3Nzu0+CsprqUxO2C/HO5/l7FS0DXYdUy6ngf2j/eFfGl4M8+4rVDg/Sg4KDg7FEuwUQVQFDsIIjQpWdYUIdgJs2R+Q0gKRGbgbHlQHGt3yg7+lSLnpevNuvNHVA4Ecoz9kRL6Q6g6hZaOnJLjEC86B6QHdx4WcV3Yjp5BR9RSTzg1T9Rf9RJ4JK6YUmHN3YBpcx2dWSFIm9MdSy9OXaP90UzgJR5CpentBCN+MN8hu9/ibSyCSCGEaSD3PKyrGoXeflWQ44RJHDuoDb/lSBndQHAFIMIGVCXQRBcIOXIGZAA3OOVI6YMaUScxugei/UZ90Q+nelaaG7dC0MVdG2RrqcZys4tMW4KvBb9CygvFXBT5EcchDQd8BdNiYWge40EDyd2sJHhT9KNhYbNRDo6e9OjL694c31HnOkfA7KsWn20u8gq3E1UuT+8qk9oNHkqByUSAg4l4Qcxcok6EQVB//9k=" alt="Client Image" class="testimonial-img">
+                    <div>
+                        <h3 class="client-name">Jitendra Sadangi</h3>
+                        <p class="client-position">CEO at Chainworks</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </section>
 
-    <footer>
-        © 2025 Prasad Patil | About Page
-    </footer>
+    <!-- Footer -->
+    <div class="footer">
+        <p class="contact">Want to work together? <a href="contact.html">Get in touch</a></p>
+
+        <!-- <p class="contact">
+        Contact Me: 
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:prasad@example.com">Email Me</a>
+    </p> -->
+
+        <p class="social">
+            Follow Me:
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/imprasadpatil" target="_blank">GitHub</a> |
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/imprasadpatil/" target="_blank">LinkedIn</a>
+        </p>
+
+        <p class="copyright">© 2025 Prasad Patil. All Rights Reserved.</p>
+    </div>
+
 </body>
+
 </html>

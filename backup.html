@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Description</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(45deg, #4e9ce9, #6fc3df);
+            color: white;
+            padding: 60px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 4em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header p {
+            font-size: 1.4em;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+
+        .header .cta-button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .header .cta-button:hover {
+            background-color: #e94e43;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Project Info Section */
+        .project-info {
+            margin-bottom: 50px;
+        }
+
+        .project-info h2 {
+            font-size: 2.7em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .project-info p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Timeline Cards Section */
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .timeline-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+        }
+
+        .timeline-card .icon {
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            color: #fff;
+            background-color: #4e9ce9;
+            border-radius: 50%;
+            padding: 25px;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+
+        .timeline-card h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .timeline-card p {
+            font-size: 1.1em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        /* Icon Color Per Card */
+        .timeline-card:nth-child(1) .icon { background-color: #FF5733; }
+        .timeline-card:nth-child(2) .icon { background-color: #FFA500; }
+        .timeline-card:nth-child(3) .icon { background-color: #4CAF50; }
+        .timeline-card:nth-child(4) .icon { background-color: #2196F3; }
+        .timeline-card:nth-child(5) .icon { background-color: #9C27B0; }
+
+        /* Random Side Border Color */
+        .timeline-card:nth-child(1) { border-left: 8px solid #FF5733; }
+        .timeline-card:nth-child(2) { border-left: 8px solid #FFA500; }
+        .timeline-card:nth-child(3) { border-left: 8px solid #4CAF50; }
+        .timeline-card:nth-child(4) { border-left: 8px solid #2196F3; }
+        .timeline-card:nth-child(5) { border-left: 8px solid #9C27B0; }
+
+        /* Button Styling */
+        .button-group {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            background-color: #4e9ce9;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .button:hover {
+            background-color: #3678b3;
+            transform: translateY(-3px);
+        }
+
+        /* Button Icon */
+        .button i {
+            font-size: 1.3em;
+        }
+
+        /* GitHub and Notion Button Colors */
+        .button.github {
+            background-color: #333;
+        }
+
+        .button.github:hover {
+            background-color: #000;
+        }
+
+        .button.notion {
+            background-color: #f8a800;
+        }
+
+        .button.notion:hover {
+            background-color: #e78900;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+<!-- Header Section -->
+<header class="header">
+    <h1>Project Title</h1>
+    <p>An overview of the project, goals, and outcomes</p>
+    <section class="button-group">
+        <a href="https://github.com" class="button github" target="_blank"><i class="fab fa-github"></i> View GitHub</a>
+        <!-- Corrected Notion Button -->
+        <a href="https://www.notion.so" class="button notion" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Notion-logo.svg" alt="Notion Logo" style="width: 20px; height: 20px; margin-right: 10px;">
+            View Notion
+        </a>
+    </section>
+</header>
+
+
+        <!-- Project Info Section -->
+        <div class="project-info">
+            <h2>Project Overview</h2>
+            <p><strong>Description:</strong> This project aims to build a fast fashion digital store with high competition. It involves creating a dynamic e-commerce website to deliver a seamless shopping experience.</p>
+            <p><strong>Role:</strong> Full-Stack Developer – Responsible for both the front-end and back-end development of the e-commerce platform, including integrations with payment systems.</p>
+            <p><strong>Technology:</strong> React.js, Node.js, MongoDB, Express.js, Stripe API</p>
+        </div>
+
+        <!-- Timeline Cards Section -->
+        <div class="timeline">
+            <div class="timeline-card">
+                <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                <h2>Project Conception</h2>
+                <p>Project goal: Fast fashion digital store</p>
+                <p>Competition: Very high competition and big market</p>
+            </div>
+
+            <div class="timeline-card">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h2>Project Planning</h2>
+                <p>Project budget: $100,000</p>
+                <p>Timeline: 5 months</p>
+                <p>Employees: 30 skilled employees</p>
+            </div>
+
+            <div class="timeline-card">
+                <div class="icon"><i class="fas fa-rocket"></i></div>
+                <h2>Project Implementation</h2>
+                <p>Due date: mm/dd/yyyy</p>
+                <p>Forecast: 20% growth</p>
+            </div>
+
+            <div class="timeline-card">
+                <div class="icon"><i class="fas fa-cogs"></i></div>
+                <h2>Project Management</h2>
+                <p>Monitoring tool: Dashboard</p>
+                <p>Efficiency: 78%</p>
+            </div>
+
+            <div class="timeline-card">
+                <div class="icon"><i class="fas fa-flag-checkered"></i></div>
+                <h2>Project Closing</h2>
+                <p>Outcome: 95% objectives met</p>
+                <p>Performance: 98% quality</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
